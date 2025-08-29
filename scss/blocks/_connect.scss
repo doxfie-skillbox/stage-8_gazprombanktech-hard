@@ -125,10 +125,12 @@
 
   &__list {
     list-style: none;
+    counter-reset: step;
     padding: 0;
     margin: 0;
     display: grid;
     gap: 24px 0;
+    
 
     @include vp-1024 {
       grid-template-columns: repeat(2, 1fr);
@@ -145,6 +147,7 @@
     display: flex;
     align-items: flex-start;
     gap: 0 12px;
+    counter-increment: step 1;
 
     @include vp-768 {
       gap: 0 20px;
@@ -161,6 +164,7 @@
     }
 
     &::before {
+      content: counter(step);
       width: 48px;
       height: 48px;
       display: flex;
@@ -187,18 +191,6 @@
         font-size: 28px;
         line-height: 32px;
       }
-    }
-
-    &:first-child::before {
-      content: "1";
-    }
-
-    &:nth-child(2)::before {
-      content: "2";
-    }
-
-    &:last-child::before {
-      content: "3";
     }
   }
 

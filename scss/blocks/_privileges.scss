@@ -1,0 +1,31 @@
+.privileges {
+  padding: 0 0 60px 0;
+
+  &__title {
+    margin: 0 0 16px 0;
+    font-size: 26px;
+    line-height: 32px;
+    font-weight: 600;
+    letter-spacing: -0.02rem;
+  }
+
+  &__text {
+    margin: 0 0 28px 0;
+    font-size: 16px;
+    line-height: 22px;
+    color: $color-storm-grey-1;
+    letter-spacing: 0.01rem;
+  }
+
+  &__list {
+    display: grid;
+    gap: 12px;
+    margin: 0 0 60px 0;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  &__item {
+    min-height: 200px;
+  }
+}
