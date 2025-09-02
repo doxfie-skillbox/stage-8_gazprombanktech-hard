@@ -7,12 +7,44 @@
   border-radius: 12px;
   background-color: $color-solitude-1;
 
+  @include vp-768 {
+    padding: 24px 24px 26px 24px;
+  }
+
+  @include vp-1024 {
+    padding: 0;
+    align-items: center;
+    gap: unset;
+    background-color: unset;
+  }
+
   &--promo {
     gap: 8px;
     border-radius: 16px;
     position: relative;
     padding: 16px 100px 16px 20px;
     background-color: $color-alice-blue;
+
+    @include vp-768 {
+      padding: 25px 300px 25px 25px;
+    }
+
+    @include vp-1024 {
+      align-items: unset;
+      padding: 48px 300px 48px 100px;;
+    }
+  }
+
+  &__icon {
+    @include vp-1024 {
+      width: auto;
+      height: auto;
+      padding: 16px;
+      border-radius: 12px;
+      color: $color-white;
+      background-color: $color-royal-blue-1;
+      margin: 0 0 20px 0;
+    }
   }
 
   &__title {
@@ -21,9 +53,24 @@
     line-height: 24px;
     font-weight: 600;
 
+    @include vp-1024 {
+      margin: 0 0 16px 0;
+      font-size: 24px;
+      line-height: 28px;
+      text-align: center;
+      letter-spacing: 0.01em;
+    }
+
     &--promo {
       font-size: 18px;
       line-height: 24px;
+
+      @include vp-1024 {
+        font-size: 24px;
+        line-height: 28px;
+        text-align: left;
+        margin: 0;
+      }
     }
   }
 
@@ -35,10 +82,23 @@
     color: $color-storm-grey-3;
     letter-spacing: -0.01rem;
 
+    @include vp-1024 {
+      font-size: 16px;
+      line-height: 22px;
+      text-align: center;
+    }
+
     &--promo {
       font-size: 14px;
       line-height: 18px;
+      letter-spacing: 0;
       color: $color-black-russian;
+
+      @include vp-1024 {
+        font-size: 16px;
+        line-height: 22px;
+        text-align: unset;
+      }
     }
   }
 
@@ -50,5 +110,11 @@
     position: absolute;
     right: 0;
     top: 8px;
+
+    @include vp-768 {
+      right: 40px;
+      top: unset;
+      bottom: 0;
+    }
   }
 }

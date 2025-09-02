@@ -1,12 +1,57 @@
 .privileges {
   padding: 0 0 60px 0;
 
+  @include vp-1024 {
+    padding: 0 0 100px 0;
+  }
+
+  &__wrapper {
+    @include vp-1024 {
+      margin: 0 0 20px 0;
+      position: relative;
+    }
+  }
+
+  &__line {
+    display: none;
+
+    @include vp-1024 {
+      margin: 0 -40px 0;
+      display: flex;
+      background-color: $color-royal-blue-1;
+      position: absolute;
+      height: 2px;
+      width: 100vw;
+      top: 42px;
+      z-index: -1;
+    }
+
+    @include vp-1304 {
+      margin: 0 calc((1536px - 100vw) / 2 - 156px) 0;
+    }
+  }
+
   &__title {
     margin: 0 0 16px 0;
     font-size: 26px;
     line-height: 32px;
     font-weight: 600;
-    letter-spacing: -0.02rem;
+    letter-spacing: -0.02em;
+    background-color: $color-white;
+
+    @include vp-768 {
+      font-size: 28px;
+      line-height: 32px;
+    }
+
+    @include vp-1024 {
+      max-width: 736px;
+      font-size: 40px;
+      line-height: 44px;
+      text-align: center;
+      letter-spacing: -0.04em;
+      margin: 0 auto;
+    }
   }
 
   &__text {
@@ -14,7 +59,17 @@
     font-size: 16px;
     line-height: 22px;
     color: $color-storm-grey-1;
-    letter-spacing: 0.01rem;
+
+    @include vp-768 {
+      margin: 0 0 32px 0;
+    }
+
+    @include vp-1024 {
+      font-size: 18px;
+      line-height: 24px;
+      text-align: center;
+      margin: 0 0 60px 0;
+    }
   }
 
   &__list {
@@ -23,9 +78,29 @@
     margin: 0 0 60px 0;
     padding: 0;
     list-style-type: none;
+
+    @include vp-768 {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 13px;
+      margin: 0 0 76px 0;
+    }
+
+    @include vp-1024 {
+      column-gap: 25px;
+      row-gap: 60px;
+      margin: 0 0 121px 0;
+    }
   }
 
   &__item {
     min-height: 200px;
+
+    @include vp-768 {
+      min-height: 280px;
+    }
+
+    @include vp-1024 {
+      min-height: unset;
+    }
   }
 }

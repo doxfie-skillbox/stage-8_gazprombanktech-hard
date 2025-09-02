@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="css/style.css">
+  <script src="privileges.js" defer></script>
   <title>Привилегии - Газпромбанк</title>
 </head>
 
@@ -95,7 +96,10 @@
     </section>
     <section class="privileges">
       <div class="container">
-        <h2 class="privileges__title">Дебетовая карта с максимальной выгодой</h2>
+        <div class="privileges__wrapper">
+          <div class="privileges__line"></div>
+          <h2 class="privileges__title">Дебетовая карта с максимальной выгодой</h2>
+        </div>
         <p class="privileges__text">при оформлении Привилегий &laquo;Стандарт&raquo; или &laquo;Плюс&raquo;</p>
         <ul class="privileges__list">
           <li class="privileges__item">
@@ -157,6 +161,8 @@
           <h3 class="privileges-card__title privileges-card__title--promo">Увеличьте доход</h3>
           <p class="privileges-card__description privileges-card__description--promo">+25% кэшбэк и&nbsp;+10% на&nbsp;остаток по&nbsp;карте</p>
           <picture class="privileges-card__picture">
+            <source media="(min-width: 1024px)" srcset="images/profit-small-desktop.png, images/profit-small-desktop@2x.png 2x" width="260px" height="175px">
+            <source media="(min-width: 767px)" srcset="images/profit-tablet.png, images/profit-tablet@2x.png 2x" width="174" height="116">
             <img class="privileges-card__img" src="images/profit-mobile.png" srcset="images/profit-mobile@2x.png 2x" width="125" height="84" alt="+25% кэшбэк и +10% на остаток по карте">
           </picture>
         </div>
@@ -322,11 +328,11 @@
         <p class="connect__text">Первый месяц Привилегий &laquo;Стандарт&raquo;&nbsp;&mdash; 0&nbsp;руб, далее 199&nbsp;руб в&nbsp;месяц. Улучшенные Привилегии &laquo;Плюс&raquo;&nbsp;&mdash; 299&nbsp;руб в&nbsp;месяц</p>
         <div class="connect__tabs">
           <div class="connect__tabs-controls">
-            <button class="connect__tabs-control is-active" type="button">Еще нет карты</button>
-            <button class="connect__tabs-control" type="button">Уже есть карта</button>
+            <button class="connect__tabs-control is-active" type="button" data-target="tab-no-card">Еще нет карты</button>
+            <button class="connect__tabs-control" type="button" data-target="tab-has-card">Уже есть карта</button>
           </div>
           <div class="connect__tabs-content">
-            <div class="connect__tabs-item is-active">
+            <div class="connect__tabs-item is-active" id="tab-no-card">
               <ol class="connect__list">
                 <li class="connect__list-item">
                   <div class="connect__item-content">
@@ -357,7 +363,7 @@
                 </li>
               </ol>
             </div>
-            <div class="connect__tabs-item">
+            <div class="connect__tabs-item" id="tab-has-card">
               <!-- Как подключить привилегии. Вкладка "Уже есть карта" -->
               <ol class="connect__list">
                 <li class="connect__list-item">

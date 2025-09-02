@@ -1375,7 +1375,7 @@ a {
   flex-direction: column;
   gap: 16px 0;
 }
-@media (min-width: 1024px) {
+@media (min-width: 960px) {
   .bonus__list {
     flex-direction: row;
     gap: 0 16px;
@@ -1386,7 +1386,7 @@ a {
     gap: 0 20px;
   }
 }
-@media (min-width: 1024px) {
+@media (min-width: 960px) {
   .bonus__item {
     width: calc(50% - 8px);
   }
@@ -1430,6 +1430,7 @@ a {
     margin: 0 0 32px 0;
     font-size: 28px;
     line-height: 32px;
+    letter-spacing: -0.01em;
   }
 }
 @media (min-width: 1024px) {
@@ -1589,6 +1590,7 @@ a {
   .connect__title {
     font-size: 28px;
     line-height: 32px;
+    letter-spacing: -0.01em;
   }
 }
 @media (min-width: 1024px) {
@@ -1823,7 +1825,7 @@ a {
 }
 @media (min-width: 1024px) {
   .benefit__wrapper {
-    padding: 40px 60px;
+    padding: 41px 60px;
   }
 }
 @media (min-width: 1304px) {
@@ -1891,7 +1893,7 @@ a {
 @media (min-width: 768px) {
   .benefit__list {
     margin: 0 0 32px 0;
-    gap: 12px 0;
+    gap: 14px 0;
   }
 }
 @media (min-width: 1024px) {
@@ -1938,6 +1940,7 @@ a {
     align-items: flex-start;
     justify-content: space-between;
     gap: 0 24px;
+    position: relative;
   }
 }
 .faq__heading {
@@ -1953,6 +1956,8 @@ a {
     margin: 0;
     width: 380px;
     flex-shrink: 0;
+    position: sticky;
+    top: 77px;
   }
 }
 .faq__icon-wrapper {
@@ -1988,6 +1993,7 @@ a {
   .faq__title {
     font-size: 28px;
     line-height: 32px;
+    letter-spacing: -0.01em;
   }
 }
 @media (min-width: 1024px) {
@@ -2010,11 +2016,34 @@ a {
 .faq__element {
   border-bottom: 2px solid #EAEDF4;
 }
+@media (min-width: 1024px) {
+  .faq__element {
+    padding: 18px 24px;
+    border-radius: 12px;
+    background-color: #F4F6FA;
+    border-bottom: none;
+  }
+}
+@media (min-width: 1024px) {
+  .faq__element.is-active {
+    padding: 18px 24px 24px;
+  }
+}
 .faq__element.is-active .faq__content {
   display: block;
 }
 .faq__element.is-active .faq__button-icon::after {
   opacity: 0;
+}
+@media (min-width: 768px) {
+  .faq__element.is-active .faq__button {
+    padding: 19px 0 16px 0;
+  }
+}
+@media (min-width: 1024px) {
+  .faq__element.is-active .faq__button {
+    padding: 0 0 20px 0;
+  }
 }
 .faq__button {
   width: 100%;
@@ -2039,7 +2068,7 @@ a {
 @media (min-width: 1024px) {
   .faq__button {
     align-items: flex-start;
-    padding: 18px 24px;
+    padding: 0;
   }
 }
 .faq__button-text {
@@ -2053,6 +2082,8 @@ a {
 @media (min-width: 1024px) {
   .faq__button-text {
     max-width: 450px;
+    font-size: 18px;
+    line-height: 24px;
   }
 }
 @media (min-width: 1304px) {
@@ -2099,12 +2130,12 @@ a {
 }
 @media (min-width: 768px) {
   .faq__text {
-    padding: 0 0 16px 0;
+    padding: 0 0 20px 0;
   }
 }
 @media (min-width: 1024px) {
   .faq__text {
-    padding: 2px 24px 24px 24px;
+    padding: 0;
   }
 }
 @media (min-width: 1304px) {
@@ -2116,19 +2147,79 @@ a {
 .privileges {
   padding: 0 0 60px 0;
 }
+@media (min-width: 1024px) {
+  .privileges {
+    padding: 0 0 100px 0;
+  }
+}
+@media (min-width: 1024px) {
+  .privileges__wrapper {
+    margin: 0 0 20px 0;
+    position: relative;
+  }
+}
+.privileges__line {
+  display: none;
+}
+@media (min-width: 1024px) {
+  .privileges__line {
+    margin: 0 -40px 0;
+    display: flex;
+    background-color: #476BF0;
+    position: absolute;
+    height: 2px;
+    width: 100vw;
+    top: 42px;
+    z-index: -1;
+  }
+}
+@media (min-width: 1304px) {
+  .privileges__line {
+    margin: 0 calc((1536px - 100vw) / 2 - 156px) 0;
+  }
+}
 .privileges__title {
   margin: 0 0 16px 0;
   font-size: 26px;
   line-height: 32px;
   font-weight: 600;
-  letter-spacing: -0.02rem;
+  letter-spacing: -0.02em;
+  background-color: #FFFFFF;
+}
+@media (min-width: 768px) {
+  .privileges__title {
+    font-size: 28px;
+    line-height: 32px;
+  }
+}
+@media (min-width: 1024px) {
+  .privileges__title {
+    max-width: 736px;
+    font-size: 40px;
+    line-height: 44px;
+    text-align: center;
+    letter-spacing: -0.04em;
+    margin: 0 auto;
+  }
 }
 .privileges__text {
   margin: 0 0 28px 0;
   font-size: 16px;
   line-height: 22px;
   color: #6A6E80;
-  letter-spacing: 0.01rem;
+}
+@media (min-width: 768px) {
+  .privileges__text {
+    margin: 0 0 32px 0;
+  }
+}
+@media (min-width: 1024px) {
+  .privileges__text {
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+    margin: 0 0 60px 0;
+  }
 }
 .privileges__list {
   display: grid;
@@ -2137,27 +2228,90 @@ a {
   padding: 0;
   list-style-type: none;
 }
+@media (min-width: 768px) {
+  .privileges__list {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 13px;
+    margin: 0 0 76px 0;
+  }
+}
+@media (min-width: 1024px) {
+  .privileges__list {
+    -moz-column-gap: 25px;
+         column-gap: 25px;
+    row-gap: 60px;
+    margin: 0 0 121px 0;
+  }
+}
 .privileges__item {
   min-height: 200px;
+}
+@media (min-width: 768px) {
+  .privileges__item {
+    min-height: 280px;
+  }
+}
+@media (min-width: 1024px) {
+  .privileges__item {
+    min-height: unset;
+  }
 }
 
 .privileges-banner {
   border-radius: 16px;
   box-shadow: 0px 4px 20px 0px rgba(20, 26, 43, 0.16);
 }
+@media (min-width: 1024px) {
+  .privileges-banner {
+    box-shadow: none;
+  }
+}
 .privileges-banner__list {
-  display: flex;
-  flex-direction: column;
+  display: grid;
   gap: 16px;
   margin: 0;
   padding: 20px;
   list-style-type: none;
 }
+@media (min-width: 768px) {
+  .privileges-banner__list {
+    gap: 24px;
+    padding: 24px;
+  }
+}
+@media (min-width: 1024px) {
+  .privileges-banner__list {
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0;
+  }
+}
+.privileges-banner__item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+@media (min-width: 1024px) {
+  .privileges-banner__item {
+    padding: 32px 22px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    border-radius: 12px;
+    background-color: #F4F6FA;
+  }
+}
 .privileges-banner__title {
-  margin: 0 0 4px 0;
+  margin: 0;
   font-size: 18px;
   line-height: 24px;
   font-weight: 600;
+}
+@media (min-width: 1024px) {
+  .privileges-banner__title {
+    font-size: 24px;
+    line-height: 28px;
+  }
 }
 .privileges-banner__text {
   margin: 0;
@@ -2165,6 +2319,17 @@ a {
   line-height: 18px;
   color: #6A6E80;
   letter-spacing: 0.01rem;
+}
+@media (min-width: 768px) {
+  .privileges-banner__text {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+@media (min-width: 1024px) {
+  .privileges-banner__text {
+    text-align: center;
+  }
 }
 
 .privileges-card {
@@ -2176,6 +2341,19 @@ a {
   border-radius: 12px;
   background-color: #F4F6FA;
 }
+@media (min-width: 768px) {
+  .privileges-card {
+    padding: 24px 24px 26px 24px;
+  }
+}
+@media (min-width: 1024px) {
+  .privileges-card {
+    padding: 0;
+    align-items: center;
+    gap: unset;
+    background-color: unset;
+  }
+}
 .privileges-card--promo {
   gap: 8px;
   border-radius: 16px;
@@ -2183,15 +2361,54 @@ a {
   padding: 16px 100px 16px 20px;
   background-color: #DDF1FF;
 }
+@media (min-width: 768px) {
+  .privileges-card--promo {
+    padding: 25px 300px 25px 25px;
+  }
+}
+@media (min-width: 1024px) {
+  .privileges-card--promo {
+    align-items: unset;
+    padding: 48px 300px 48px 100px;
+  }
+}
+@media (min-width: 1024px) {
+  .privileges-card__icon {
+    width: auto;
+    height: auto;
+    padding: 16px;
+    border-radius: 12px;
+    color: #FFFFFF;
+    background-color: #476BF0;
+    margin: 0 0 20px 0;
+  }
+}
 .privileges-card__title {
   margin: 0;
   font-size: 20px;
   line-height: 24px;
   font-weight: 600;
 }
+@media (min-width: 1024px) {
+  .privileges-card__title {
+    margin: 0 0 16px 0;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    letter-spacing: 0.01em;
+  }
+}
 .privileges-card__title--promo {
   font-size: 18px;
   line-height: 24px;
+}
+@media (min-width: 1024px) {
+  .privileges-card__title--promo {
+    font-size: 24px;
+    line-height: 28px;
+    text-align: left;
+    margin: 0;
+  }
 }
 .privileges-card__description {
   margin: 0;
@@ -2201,10 +2418,25 @@ a {
   color: #696E82;
   letter-spacing: -0.01rem;
 }
+@media (min-width: 1024px) {
+  .privileges-card__description {
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+  }
+}
 .privileges-card__description--promo {
   font-size: 14px;
   line-height: 18px;
+  letter-spacing: 0;
   color: #1E222E;
+}
+@media (min-width: 1024px) {
+  .privileges-card__description--promo {
+    font-size: 16px;
+    line-height: 22px;
+    text-align: unset;
+  }
 }
 .privileges-card__link {
   color: #476BF0;
@@ -2213,4 +2445,11 @@ a {
   position: absolute;
   right: 0;
   top: 8px;
+}
+@media (min-width: 768px) {
+  .privileges-card__picture {
+    right: 40px;
+    top: unset;
+    bottom: 0;
+  }
 }/*# sourceMappingURL=style.css.map */
