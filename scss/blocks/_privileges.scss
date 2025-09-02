@@ -5,6 +5,10 @@
     padding: 0 0 100px 0;
   }
 
+  @include vp-1304 {
+    padding: 0 0 120px 0;
+  }
+
   &__wrapper {
     @include vp-1024 {
       margin: 0 0 20px 0;
@@ -16,18 +20,15 @@
     display: none;
 
     @include vp-1024 {
-      margin: 0 -40px 0;
       display: flex;
+      margin: 0 calc(-50vw + 50%);
       background-color: $color-royal-blue-1;
       position: absolute;
       height: 2px;
       width: 100vw;
       top: 42px;
+      left: 0;
       z-index: -1;
-    }
-
-    @include vp-1304 {
-      margin: 0 calc((1536px - 100vw) / 2 - 156px) 0;
     }
   }
 
@@ -55,40 +56,40 @@
   }
 
   &__text {
-    margin: 0 0 28px 0;
+    margin: 0;
     font-size: 16px;
     line-height: 22px;
     color: $color-storm-grey-1;
-
-    @include vp-768 {
-      margin: 0 0 32px 0;
-    }
 
     @include vp-1024 {
       font-size: 18px;
       line-height: 24px;
       text-align: center;
-      margin: 0 0 60px 0;
     }
   }
 
   &__list {
     display: grid;
     gap: 12px;
-    margin: 0 0 60px 0;
+    margin: 28px 0 60px 0;
     padding: 0;
     list-style-type: none;
 
     @include vp-768 {
       grid-template-columns: repeat(3, 1fr);
       gap: 13px;
-      margin: 0 0 76px 0;
+      margin: 32px 0 76px 0;
     }
 
     @include vp-1024 {
       column-gap: 25px;
       row-gap: 60px;
-      margin: 0 0 121px 0;
+      margin: 60px 0 121px 0;
+    }
+
+    @include vp-1304 {
+      column-gap: 24px;
+      margin: 80px 0 141px 0;
     }
   }
 

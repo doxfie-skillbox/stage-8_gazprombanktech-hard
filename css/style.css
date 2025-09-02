@@ -740,7 +740,7 @@ a {
 }
 @media (min-width: 1304px) {
   .footer__nav-list {
-    max-width: 390px;
+    max-width: 400px;
   }
 }
 .footer__nav-item {
@@ -1817,6 +1817,7 @@ a {
   padding: 20px 20px 40px 20px;
   background-color: #5E81FF;
   border-radius: 16px;
+  position: relative;
 }
 @media (min-width: 768px) {
   .benefit__wrapper {
@@ -1830,14 +1831,16 @@ a {
 }
 @media (min-width: 1304px) {
   .benefit__wrapper {
-    padding: 80px;
+    padding: 80px 0 82px 80px;
     display: flex;
-    flex-direction: row-reverse;
   }
 }
 @media (min-width: 1304px) {
   .benefit__picture {
     flex-shrink: 0;
+    position: absolute;
+    right: 0;
+    top: 54px;
   }
 }
 .benefit__image {
@@ -1846,6 +1849,11 @@ a {
 @media (min-width: 768px) {
   .benefit__image {
     margin: 0 auto 40px auto;
+  }
+}
+@media (min-width: 1304px) {
+  .benefit__image {
+    margin: 0;
   }
 }
 @media (min-width: 1304px) {
@@ -1899,6 +1907,11 @@ a {
 @media (min-width: 1024px) {
   .benefit__list {
     margin: 0 0 40px 0;
+  }
+}
+@media (min-width: 1304px) {
+  .benefit__list {
+    gap: 13px;
   }
 }
 .benefit__item {
@@ -2152,6 +2165,11 @@ a {
     padding: 0 0 100px 0;
   }
 }
+@media (min-width: 1304px) {
+  .privileges {
+    padding: 0 0 120px 0;
+  }
+}
 @media (min-width: 1024px) {
   .privileges__wrapper {
     margin: 0 0 20px 0;
@@ -2163,19 +2181,15 @@ a {
 }
 @media (min-width: 1024px) {
   .privileges__line {
-    margin: 0 -40px 0;
     display: flex;
+    margin: 0 calc(-50vw + 50%);
     background-color: #476BF0;
     position: absolute;
     height: 2px;
     width: 100vw;
     top: 42px;
+    left: 0;
     z-index: -1;
-  }
-}
-@media (min-width: 1304px) {
-  .privileges__line {
-    margin: 0 calc((1536px - 100vw) / 2 - 156px) 0;
   }
 }
 .privileges__title {
@@ -2203,28 +2217,22 @@ a {
   }
 }
 .privileges__text {
-  margin: 0 0 28px 0;
+  margin: 0;
   font-size: 16px;
   line-height: 22px;
   color: #6A6E80;
-}
-@media (min-width: 768px) {
-  .privileges__text {
-    margin: 0 0 32px 0;
-  }
 }
 @media (min-width: 1024px) {
   .privileges__text {
     font-size: 18px;
     line-height: 24px;
     text-align: center;
-    margin: 0 0 60px 0;
   }
 }
 .privileges__list {
   display: grid;
   gap: 12px;
-  margin: 0 0 60px 0;
+  margin: 28px 0 60px 0;
   padding: 0;
   list-style-type: none;
 }
@@ -2232,7 +2240,7 @@ a {
   .privileges__list {
     grid-template-columns: repeat(3, 1fr);
     gap: 13px;
-    margin: 0 0 76px 0;
+    margin: 32px 0 76px 0;
   }
 }
 @media (min-width: 1024px) {
@@ -2240,7 +2248,14 @@ a {
     -moz-column-gap: 25px;
          column-gap: 25px;
     row-gap: 60px;
-    margin: 0 0 121px 0;
+    margin: 60px 0 121px 0;
+  }
+}
+@media (min-width: 1304px) {
+  .privileges__list {
+    -moz-column-gap: 24px;
+         column-gap: 24px;
+    margin: 80px 0 141px 0;
   }
 }
 .privileges__item {
@@ -2372,6 +2387,11 @@ a {
     padding: 48px 300px 48px 100px;
   }
 }
+@media (min-width: 1304px) {
+  .privileges-card--promo {
+    padding: 48px 444px 48px 120px;
+  }
+}
 @media (min-width: 1024px) {
   .privileges-card__icon {
     width: auto;
@@ -2416,7 +2436,6 @@ a {
   line-height: 18px;
   font-weight: 400;
   color: #696E82;
-  letter-spacing: -0.01rem;
 }
 @media (min-width: 1024px) {
   .privileges-card__description {
@@ -2438,6 +2457,9 @@ a {
     text-align: unset;
   }
 }
+.privileges-card__description--desktop-lg {
+  max-width: 390px;
+}
 .privileges-card__link {
   color: #476BF0;
 }
@@ -2451,5 +2473,10 @@ a {
     right: 40px;
     top: unset;
     bottom: 0;
+  }
+}
+@media (min-width: 1304px) {
+  .privileges-card__picture {
+    right: 184px;
   }
 }/*# sourceMappingURL=style.css.map */

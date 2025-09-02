@@ -13,6 +13,7 @@
     padding: 20px 20px 40px 20px;
     background-color: $color-cornflower-blue;
     border-radius: 16px;
+    position: relative;
 
     @include vp-768 {
       padding: 40px 24px 60px 24px;
@@ -23,15 +24,17 @@
     }
 
     @include vp-1304 {
-      padding: 80px;
+      padding: 80px 0 82px 80px;
       display: flex;
-      flex-direction: row-reverse;
     }
   }
 
   &__picture {
     @include vp-1304 {
       flex-shrink: 0;
+      position: absolute;
+      right: 0;
+      top: 54px;
     }
   }
 
@@ -40,6 +43,10 @@
 
     @include vp-768 {
       margin: 0 auto 40px auto;
+    }
+
+    @include vp-1304 {
+      margin: 0;
     }
   }
 
@@ -93,6 +100,10 @@
 
     @include vp-1024 {
       margin: 0 0 40px 0;
+    }
+
+    @include vp-1304 {
+      gap: 13px;
     }
   }
 
