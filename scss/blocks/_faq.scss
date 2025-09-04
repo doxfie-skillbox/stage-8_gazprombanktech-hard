@@ -153,6 +153,11 @@
   &__button-text {
     max-width: 280px;
 
+    &:hover,
+    &:focus-visible {
+      color: $color-storm-grey-3;
+    }
+
     @include vp-768 {
       max-width: 100%;
     }

@@ -855,6 +855,9 @@ a {
   color: #FFFFFF;
   background-color: #476BF0;
 }
+.btn--secondary:hover, .btn--secondary:focus-visible {
+  background-color: #3356D7;
+}
 .btn--tertiary {
   color: #FFFFFF;
   padding: 15px 24px;
@@ -885,6 +888,7 @@ a {
 
 .socials {
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
   padding: 0;
   list-style: none;
@@ -915,6 +919,10 @@ a {
   border: 1px solid #CCCFDE;
   border-radius: 10px;
   outline: none;
+  color: #1E222E;
+}
+.custom-input__field:hover, .custom-input__field:focus-visible {
+  border-color: #476BF0;
 }
 @media (min-width: 768px) {
   .custom-input__field {
@@ -928,6 +936,9 @@ a {
   font-size: 12px;
   line-height: 14px;
   color: #6A6E80;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 .custom-input__error {
   display: none;
@@ -935,6 +946,7 @@ a {
   font-size: 12px;
   line-height: 14px;
   color: #F6514B;
+  position: absolute;
 }
 .custom-input--error .custom-input__field {
   border-color: #F6514B;
@@ -969,6 +981,9 @@ a {
   align-items: flex-start;
   gap: 12px;
   cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 .custom-checkbox__field {
   width: 20px;
@@ -980,6 +995,9 @@ a {
   border: 1px solid #CDCFDE;
   border-radius: 4px;
   background-color: #FFFFFF;
+}
+.custom-checkbox__field:hover, .custom-checkbox__field:focus-visible {
+  border-color: #476BF0;
 }
 .custom-checkbox__icon {
   width: 12px;
@@ -993,6 +1011,9 @@ a {
 }
 .custom-checkbox__link {
   color: #476BF0;
+}
+.custom-checkbox__link:hover, .custom-checkbox__link:focus-visible {
+  color: #3356D7;
 }
 
 .form__wrapper {
@@ -1677,6 +1698,9 @@ a {
   border-radius: 8px;
   cursor: pointer;
 }
+.connect__tabs-control:hover, .connect__tabs-control:focus-visible {
+  background-color: #F4F6FA;
+}
 @media (min-width: 360px) {
   .connect__tabs-control {
     padding: 11px 25px;
@@ -1709,6 +1733,7 @@ a {
   .connect__list {
     gap: 32px;
     display: flex;
+    flex-wrap: wrap;
   }
 }
 .connect__list-item {
@@ -1798,6 +1823,9 @@ a {
 }
 .connect__link {
   color: #476BF0;
+}
+.connect__link:hover, .connect__link:focus-visible {
+  color: #3356D7;
 }
 
 .benefit {
@@ -2087,6 +2115,9 @@ a {
 .faq__button-text {
   max-width: 280px;
 }
+.faq__button-text:hover, .faq__button-text:focus-visible {
+  color: #696E82;
+}
 @media (min-width: 768px) {
   .faq__button-text {
     max-width: 100%;
@@ -2182,18 +2213,18 @@ a {
 @media (min-width: 1024px) {
   .privileges__line {
     display: flex;
-    margin: 0 calc(-50vw + 50%);
     background-color: #476BF0;
     position: absolute;
     height: 2px;
-    width: 100vw;
-    top: 42px;
+    width: 100%;
+    top: 48%;
     left: 0;
     z-index: -1;
   }
 }
 .privileges__title {
   margin: 0 0 16px 0;
+  padding: 0 15px;
   font-size: 26px;
   line-height: 32px;
   font-weight: 600;
@@ -2204,6 +2235,7 @@ a {
   .privileges__title {
     font-size: 28px;
     line-height: 32px;
+    padding: 0 20px;
   }
 }
 @media (min-width: 1024px) {
@@ -2224,6 +2256,8 @@ a {
 }
 @media (min-width: 1024px) {
   .privileges__text {
+    max-width: 736px;
+    margin: 0 auto;
     font-size: 18px;
     line-height: 24px;
     text-align: center;
@@ -2373,7 +2407,7 @@ a {
   gap: 8px;
   border-radius: 16px;
   position: relative;
-  padding: 16px 100px 16px 20px;
+  padding: 16px 150px 16px 20px;
   background-color: #DDF1FF;
 }
 @media (min-width: 768px) {
@@ -2463,10 +2497,18 @@ a {
 .privileges-card__link {
   color: #476BF0;
 }
+.privileges-card__link:hover, .privileges-card__link:focus-visible {
+  color: #3356D7;
+}
 .privileges-card__picture {
   position: absolute;
   right: 0;
   top: 8px;
+}
+@media (min-width: 478px) {
+  .privileges-card__picture {
+    top: 0;
+  }
 }
 @media (min-width: 768px) {
   .privileges-card__picture {

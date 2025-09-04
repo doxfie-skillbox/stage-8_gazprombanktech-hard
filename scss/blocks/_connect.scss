@@ -109,6 +109,10 @@
     border-radius: 8px;
     cursor: pointer;
 
+    &:hover,
+    &:focus-visible {
+      background-color: $color-solitude-1;
+    }
 
     @include vp-360 {
       padding: 11px 25px;
@@ -131,7 +135,7 @@
     margin: 0;
     display: grid;
     gap: 24px 0;
-    
+
 
     @include vp-1024 {
       grid-template-columns: repeat(2, 1fr);
@@ -141,6 +145,7 @@
     @include vp-1304 {
       gap: 32px;
       display: flex;
+      flex-wrap: wrap;
     }
   }
 
@@ -227,5 +232,10 @@
 
   &__link {
     color: $color-royal-blue-1;
+
+    &:hover,
+    &:focus-visible {
+      color: $color-free-speech-blue;
+    }
   }
 }

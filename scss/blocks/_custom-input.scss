@@ -11,6 +11,12 @@
     border: 1px solid $color-periwinkle;
     border-radius: 10px;
     outline: none;
+    color: $color-black-russian;
+
+    &:hover,
+    &:focus-visible {
+      border-color: $color-royal-blue-1;
+    }
 
     @include vp-768 {
       padding: 29px 19px 9px 19px;
@@ -24,6 +30,7 @@
     font-size: 12px;
     line-height: 14px;
     color: $color-storm-grey-1;
+    user-select: none;
   }
 
   &__error {
@@ -32,6 +39,7 @@
     font-size: 12px;
     line-height: 14px;
     color: $color-sunset-orange;
+    position: absolute;
   }
 
   &--error {

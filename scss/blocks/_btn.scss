@@ -23,6 +23,11 @@
     padding: 19px 32px;
     color: $color-white;
     background-color: $color-royal-blue-1;
+
+    &:hover,
+    &:focus-visible {
+      background-color: $color-free-speech-blue;
+    }
   }
 
   &--tertiary {

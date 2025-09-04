@@ -95,11 +95,11 @@
       </div>
     </section>
     <section class="privileges">
+      <div class="privileges__wrapper">
+        <div class="privileges__line"></div>
+        <h2 class="privileges__title">Дебетовая карта с максимальной выгодой</h2>
+      </div>
       <div class="container">
-        <div class="privileges__wrapper">
-          <div class="privileges__line"></div>
-          <h2 class="privileges__title">Дебетовая карта с максимальной выгодой</h2>
-        </div>
         <p class="privileges__text">при оформлении Привилегий &laquo;Стандарт&raquo; или &laquo;Плюс&raquo;</p>
         <ul class="privileges__list">
           <li class="privileges__item">
@@ -161,7 +161,7 @@
           <h3 class="privileges-card__title privileges-card__title--promo">Увеличьте доход</h3>
           <p class="privileges-card__description privileges-card__description--promo">+25% кэшбэк и&nbsp;+10% на&nbsp;остаток по&nbsp;карте</p>
           <picture class="privileges-card__picture">
-            <source media="(min-width: 1024px)" srcset="images/profit-small-desktop.png, images/profit-small-desktop@2x.png 2x" width="260px" height="175px">
+            <source media="(min-width: 1024px)" srcset="images/profit-small-desktop.png, images/profit-small-desktop@2x.png 2x" width="260" height="175">
             <source media="(min-width: 767px)" srcset="images/profit-tablet.png, images/profit-tablet@2x.png 2x" width="174" height="116">
             <img class="privileges-card__img" src="images/profit-mobile.png" srcset="images/profit-mobile@2x.png 2x" width="125" height="84" alt="+25% кэшбэк и +10% на остаток по карте">
           </picture>
@@ -223,7 +223,7 @@
                 <label class="custom-input__label" for="phone">Мобильный телефон</label>
                 <span class="custom-input__error">Неверно заполненное поле</span>
               </div>
-              <div class="custom-input">
+              <div class="custom-input custom-input--error">
                 <input class="custom-input__field" type="email" id="email" name="email">
                 <label class="custom-input__label" for="email">Email</label>
                 <span class="custom-input__error">Неверно заполненное поле</span>

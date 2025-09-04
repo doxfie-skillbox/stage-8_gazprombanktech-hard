@@ -9,7 +9,7 @@
     width: unset;
   }
 
-  &__input:checked + .custom-checkbox__label {
+  &__input:checked+.custom-checkbox__label {
     .custom-checkbox__field {
       background-color: $color-royal-blue-1;
       border-color: $color-royal-blue-1;
@@ -25,6 +25,7 @@
     align-items: flex-start;
     gap: 12px;
     cursor: pointer;
+    user-select: none;
   }
 
   &__field {
@@ -37,6 +38,11 @@
     border: 1px solid $color-periwinkle-2;
     border-radius: 4px;
     background-color: $color-white;
+
+    &:hover,
+    &:focus-visible {
+      border-color: $color-royal-blue-1;
+    }
   }
 
   &__icon {
@@ -53,5 +59,10 @@
 
   &__link {
     color: $color-royal-blue-1;
+
+    &:hover,
+    &:focus-visible {
+      color: $color-free-speech-blue;
+    }
   }
 }
